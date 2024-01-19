@@ -71,6 +71,27 @@ h6 {
     transform: rotate(360deg);
   }
 }
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+}
+
+@media (min-aspect-ratio: 16/9){
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9){
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -455,35 +476,20 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("/assets/img/hiberna.mp4") top center;
+  background: url("../../hiberna.mp4") top center;
   background-size: cover;
   position: relative;
   padding: 0;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  font-weight: bold;
-}
-#hero .textSettings {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  font-weight: bold;
 }
 
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.284);
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
-  justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 #hero .container {
@@ -503,25 +509,16 @@ h6 {
   line-height: 56px;
   color: #fff;
   font-family: "Poppins", sans-serif;
-  justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 #hero h1 span {
-  color: #cda45e;
-  justify-content: center;
-    align-items: center;
-    text-align: center;
+  color: #ffffff;
 }
 
 #hero h2 {
   color: #eee;
   margin-bottom: 10px 0 0 0;
   font-size: 22px;
-  justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 #hero .btns {
@@ -633,15 +630,9 @@ h6 {
 @media (max-height: 500px) {
   #hero {
     height: auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
 
   #hero .container {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     padding-top: 130px;
     padding-bottom: 60px;
   }
@@ -649,17 +640,11 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     font-size: 28px;
     line-height: 36px;
   }
 
   #hero h2 {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     font-size: 18px;
     line-height: 24px;
   }
@@ -674,27 +659,6 @@ h6 {
   100% {
     transform: scale(1, 1);
     opacity: 0;
-  }
-}
-.back-video {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-
-}
-
-@media (min-aspect-ratio: 16/9){
-  .back-video {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-aspect-ratio: 16/9){
-  .back-video {
-    width: auto;
-    height: 100%;
   }
 }
 
